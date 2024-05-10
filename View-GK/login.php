@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Kiểm tra dữ liệu đăng nhập với cơ sở dữ liệu
     if ($username && $password) {
         // Kết nối đến cơ sở dữ liệu
-        require_once 'C:\xampp\htdocs\VuHaTrang-21010289\GiuaKy\Model\index.php';
+        require_once 'E:\xampp\htdocs\NguyenHuuHoan-21012873\GiuaKy\index.php';
 
         // Truy vấn để kiểm tra thông tin đăng nhập
         $query = "SELECT * FROM User WHERE TenUser = :username AND MatKhau = :password";
