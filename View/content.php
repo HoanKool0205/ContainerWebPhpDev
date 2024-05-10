@@ -11,13 +11,13 @@ if (ini_get('session.use-cookies')) {
         "test",
         time() - 42000,
 
-        $params[“path”],
+        #$params[“path”],
 
-        $params[“domain”],
+        #$params[“domain”],
 
-        $params[“secure”],
+        #$params[“secure”],
 
-        $params[“httponly”]
+        #$params[“httponly”]
 
     );
 
