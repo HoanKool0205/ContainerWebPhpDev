@@ -144,7 +144,9 @@
 								<a href="#" class="link-direction">
 									<i class="fa fa-heart" aria-hidden="true"></i>
 									<div class="left-info">
-										<span class="index">0 item</span>
+										@if(Cart::instance('wishlist')->count() > 0)
+											<span class="index">{{Cart::instance('wishlist')->count() }} item</span>
+										@endif
 										<span class="title">Wishlist</span>
 									</div>
 								</a>
@@ -153,8 +155,8 @@
 								<a href="#" class="link-direction">
 									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 									<div class="left-info">
-										@if (Cart::count() > 0)
-										<span class="index">{{Cart::count()}} items</span>
+										@if (Cart::instance('cart')->count() > 0)
+										<span class="index">{{Cart::instance('cart')->count()}} items</span>
 										@endif										
 										<span class="title">CART</span>
 									</div>
@@ -484,6 +486,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js" integrity="sha512-EnXkkBUGl2gBm/EIZEgwWpQNavsnBbeMtjklwAa7jLj60mJk932aqzXFmdPKCG6ge/i8iOCK0Uwl1Qp+S0zowg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- API KEY -->
+	<script src="https://cdn.tiny.cloud/1/7kju2jvck030gdgtfw7mv8fstgvgbhnpypslolvgwrsrac7c/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
     @livewireScripts
 
