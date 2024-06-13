@@ -18,7 +18,7 @@ class Order extends Model
 
     public function orderItems()
     {
-        return $this->hamany(OrderItem::class);
+        return $this->hasMany(OrderItem::class);
     }
 
     public function shipping()
