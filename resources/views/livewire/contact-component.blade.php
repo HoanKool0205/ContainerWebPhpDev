@@ -46,9 +46,9 @@
                             <div class="contact-box contact-info">
                                 <div class="wrap-map">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.027356774597!2d105.74552621539406!3d20.96247409467952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452efff394ce3%3A0x391a39d4325be464!2sTr%C6%B0%E1%BB%9Dng%20%C4%90%E1%BA%A1i%20H%E1%BB%8Dc%20Phenikaa!5e0!3m2!1svi!2s!4v1625732468259!5m2!1svi!2s"
-                                        width="600"
-                                        height="450"
+                                        src="{{$setting->map}}"
+                                        width="100%"
+                                        height="320"
                                         style="border:0;"
                                         allowfullscreen=""
                                         loading="lazy">
@@ -60,21 +60,21 @@
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
                                         <div class="right-info">
                                             <b>Email</b>
-                                            <p>Support1@Mercado.com</p>
+                                            <p>{{$setting->email}}</p>
                                         </div>
                                     </div>
                                     <div class="icon-box-item">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
                                         <div class="right-info">
                                             <b>Phone</b>
-                                            <p>0123-465-789-111</p>
+                                            <p>{{$setting->phone}}</p>
                                         </div>
                                     </div>
                                     <div class="icon-box-item">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                                         <div class="right-info">
-                                            <b>Mail Office</b>
-                                            <p>Sed ut perspiciatis unde omnis<br />Street Name, Los Angeles</p>
+                                            <b>Adrress</b>
+                                            <p>{{$setting->address}}</p>
                                         </div>
                                     </div>
                                 </div>

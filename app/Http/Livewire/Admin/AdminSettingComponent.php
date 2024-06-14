@@ -56,38 +56,38 @@ class AdminSettingComponent extends Component
     public function saveSettings()
     {
         $this->validate([
-        'email' => 'required |email',
-        'phone' => 'required',
-        'phone2' => 'required',
-        'address' => 'required',
-        'map' => 'required',
-        'facebook' => 'required',
-        'twiter' => 'required',
-        'tiktok' => 'required',
-        'instagram' => 'required',
-        'youtube' => 'required'
+            'email' => 'required|email',
+            'phone' => 'required',
+            'phone2' => 'required',
+            'address' => 'required',
+            'map' => 'required',
+            'facebook' => 'required',
+            'twiter' => 'required',
+            'tiktok' => 'required',
+            'instagram' => 'required',
+            'youtube' => 'required'
         ]);
 
-        $setting = Setting :: find(1);
-        if(!$setting)
-        {
-
+        $setting = Setting::find(1);
+        if (!$setting) {
             $setting = new Setting();
-
-            $setting->email = $this->email;
-            $setting->phone = $this->phone;
-            $setting->phone2 = $this->phone2;
-            $setting->address = $this->address;
-            $setting->map = $this->map;
-            $setting->facebook = $this->facebook;
-            $setting->twiter = $this->twiter;
-            $setting->tiktok = $this->tiktok;
-            $setting->instagram = $this->instagram;
-            $setting->youtube = $this->youtube;
-            $setting->save();
-            session()->flash('message','Settings has been saved successfully!');
         }
+
+        $setting->email = $this->email;
+        $setting->phone = $this->phone;
+        $setting->phone2 = $this->phone2;
+        $setting->address = $this->address;
+        $setting->map = $this->map;
+        $setting->facebook = $this->facebook;
+        $setting->twiter = $this->twiter;
+        $setting->tiktok = $this->tiktok;
+        $setting->instagram = $this->instagram;
+        $setting->youtube = $this->youtube;
+        $setting->save();
+
+        session()->flash('message', 'Settings have been saved successfully!');
     }
+
 
     public function render()
     {
