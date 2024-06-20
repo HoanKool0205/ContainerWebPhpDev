@@ -129,7 +129,7 @@
 												</a>
 											</div>
 											<div class="product-info">
-												<a href="{{route('product.details',['slug'=>$c_product->slug])}}" class="product-name"><span>Lois Caron LCS-4027 Analog Watch - For Men</span></a>
+												<a href="{{route('product.details',['slug'=>$c_product->slug])}}" class="product-name"><span>{{$c_product->name}}</span></a>
 												<div class="wrap-price"><span class="product-price">${{$c_product->regular_price}}</span></div>
 											</div>
 										</div>
